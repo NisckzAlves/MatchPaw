@@ -1,0 +1,144 @@
+body {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+/* COMEÇO DO NAVBAR */
+
+.menu-bar {
+  border-radius: 25px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: inline-flex;
+  background-color: pink;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  align-items: center;
+  padding: 0 10px;
+  margin: 50px 0 0 0;
+}
+.menu-bar li {
+  list-style: none;
+  color: purple;
+  font-family: sans-serif;
+  font-weight: bold;
+  padding: 12px 16px;
+  margin: 0 8px;
+  position: relative;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.menu-bar a {
+  text-decoration: none;
+  color: purple;
+}
+
+.menu-bar li::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  transition: 0.2s;
+  border-radius: 25px;
+}
+.menu-bar li:hover {
+  color: purple;
+}
+.menu-bar li:hover::before {
+  background: linear-gradient(to bottom, #ffffff, #ffffff);
+  box-shadow: 0px 3px 20px 0px purple;
+  transform: scale(1.2);
+}/*# sourceMappingURL=scss.css.map */
+
+/* FIM DO NAVBAR */
+
+
+/* INICIO DA BARRA DE PESQUISA */
+.form{
+  position: relative;
+  top: 20%;
+  bottom: 20%;
+  left: 5%;
+  transition: all 1s;
+  width: 50px;
+  height: 50px;
+  background: white;
+  box-sizing: border-box;
+  border-radius: 25px;
+  border: 4px solid white;
+  padding: 5px;
+}
+
+.input{
+  position: absolute;
+  top: -10%;
+  left: 0;
+  width: 100%;;
+  height: 42.5px;
+  line-height: 30px;
+  outline: 0;
+  border: 0;
+  display: none;
+  font-size: 1em;
+  border-radius: 20px;
+  padding: 0 20px;
+}
+
+.fa{
+  box-sizing: border-box;
+  padding: 10px;
+  width: 42.5px;
+  height: 42.5px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 50%;
+  color: #07051a;
+  text-align: center;
+  font-size: 1.2em;
+  transition: all 1s;
+}
+
+.form:hover,
+.form:valid{
+  width: 200px;
+  cursor: pointer;
+}
+
+.form:hover input,
+.form:valid input{
+  display: block;
+}
+
+.form:hover .fa,
+.form:valid .fa{
+  background: pink;
+  color: white;
+}
+
+
+.a {
+display: none;
+position: absolute;
+top: 70px;
+bottom:0;
+left: 0;
+right: 0;
+font-size: 20px;
+color: white;
+text-align: center; 
+width: 100%;
+}
+
+.form:valid a {
+display: block;
+}
+
+/* FIM DA BARRA DE PESQUISA */
