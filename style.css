@@ -24,3 +24,6 @@
     .banner-text p{color:#fff;}
     .text-center{color:pink;};
 
+*{
+    padding: 0;
+}
